@@ -1,0 +1,133 @@
+*
+  {
+    z-index: 950;
+  }
+  body
+  {
+    font-family: 'Courier New', Courier;
+    text-align: center;
+    margin-top: 150px;
+  }
+  p::before,div::after,div::before,p::after
+  {
+    content: '';
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 900;
+    opacity: 0.25;
+  }
+  div::before
+  {
+    background-color: red;
+    top: 300px;
+    right: 45%;
+    animation: red 5s;
+    border-radius: 55% 25% 55% 5%;
+  }
+ 
+  p::before
+  {
+    background-color: blue;
+    animation: blue 5s;
+    left: 45%;
+    top: 50px;
+    border-radius: 55% 5% 55% 25%;
+  }
+  div::after
+  {
+    background-color: green;
+    animation: green 5s;
+    left: 45%;
+    top: 300px;
+    border-radius: 25% 55% 5% 55%;
+  }
+  p::after
+  {
+    background-color: yellow;
+    animation: yellow 5s;
+    top: 50px;
+    right: 45%;
+    border-radius: 5% 55% 25% 55%;
+  }
+  h3
+  {
+    margin: 10px auto -100px auto;
+    text-transform: capitalize;
+    color: #757575;
+    text-shadow: -3px 3px white;
+  }
+  p
+  {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    padding-top: 170px;
+    padding-bottom: 270px;
+    max-width: 650px;
+    animation: text-back 5s 1;
+    border-radius: 35% 35% 95% 95% ;
+    font-weight: bold;
+    color: #757575;
+    text-shadow: -3px 3px white;
+  }
+  div
+  {
+    margin: -200px auto;
+    text-shadow: -2px 2px black;
+    color: white;
+    max-width: 350px;
+    min-height: 100px;
+    padding-top: 40px;
+    animation: result 6s;
+    border-radius: 25px;
+    font-size: 14pt;
+    font-weight: 500;
+    opacity: 0.9;
+    box-shadow: 20px 20px 80px 0px cornflowerblue;
+  }
+  b
+  {
+    animation: bold 8s;
+    
+  }
+  .error
+  {
+    background-color: red;
+  }
+  .result
+  {
+    background-color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    
+    opacity: 1;
+  }
+   @keyframes red {
+  from {border-radius: 0;}
+  to {border-radius: 55% 25% 55% 5%;}
+  }
+  
+  @keyframes blue {
+  from {border-radius: 0;}
+  to {border-radius: 55% 5% 55% 25%;}
+  }
+   @keyframes green {
+  from {border-radius: 0;}
+  to {border-radius: 25% 55% 5% 55%;}
+  }
+  
+  @keyframes yellow {
+  from {border-radius: 0;}
+  to {border-radius: 5% 55% 25% 55%;}
+  }
+  @keyframes text-back {
+  from {border-radius: 0;}
+  to {border-radius: 35% 35% 95% 95%;}
+  }
+  @keyframes result{
+    from {border-radius: 0;}
+    to {border-radius: 25px;}
+  }
+  @keyframes bold{
+    from {opacity:0;}
+    to {opacity:1;}
+  }
